@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoMaster Academy</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../replace/bootstrap-replacement.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../image/Crypto.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><img src="../image/Vector.png" alt="image"> CryptoMaster Academy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link link2" href="../index.html">о нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link2" href="./platforma.html">платформа</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link2">курсы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link2" href="./carousel.html">отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link2" href="../index.html#contact">соцсети </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link2" href="./xarita.html">контакты</a>
+          </li>
+          <li class="nav-item">
+  <a class="nav-link link2" href="./form.html"> <i class='bx bx-message'></i>оставить отзыв</a>
+</li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class='bx bxs-phone'></i>+375(29)536-13-37</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class='bx bx-envelope'></i> glebsarabajko@gmail.com</a>
+          </li>
+        </ul>
+        <a href="./kurs.html" style="color: black !important; ">
+          <form class="d-flex" role="search">
+            <button class="btn navbar_btn" type="button">записаться на курс</button>
+          </form>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="navbar2">
+    <ul>
+      <li><a href="../index.html">о нас</a></li>
+      <li><a href="./platforma.html">платформа</a></li>
+      <li><a href="./kurs.html">курсы</a></li>
+      <li><a href="./carousel.html">отзывы</a></li>
+      <li><a href="../index.html#contact">соцсети</a></li>
+      <li><a href="./xarita.html">контакты</a></li>
+      <li><a href="./form.html">оставить отзыв</a></li>
+    </ul>
+  </div>
+  <main class="vopros">
+    <h2>Часто задаваемые вопросы </h2>
+    <div class="vapros_result" style="width: 100%;">
+    </div>
+  </main>
+  <center><a href="javascript:history.back()"><button class="button-worring">назад</button></a></center>
+
+  <footer>
+    <ul class="footer_page">
+      <li>Контакты:</li>
+      <li><a href="#">Почта: glebsarabajko@gmail.com</a></li>
+      <li><a href="#">+375(29)536-13-37</a></li>
+      <li><a href="#">Юридический адрес:</a></li>
+      <li><a href="#">г. Минск, ул. Белорусская, д. 19</a></li>
+    </ul>
+    <ul class="footer_link footer_link1">
+      <li><a href="../Политика конфедициальности.docx">Политика конфиденциальности</a></li>
+      <li><a href="../Пользовательское соглашение.docx">Пользовательское соглашение </a></li>
+      <li><a href="../Безопасность платежей.pdf">Безопасность платежей</a></li>
+      <li><a href="../Договор оферты.docx">Договор публичной оферты</a></li>
+    </ul>
+    <ul style="text-align: center;" class="footer_page2">
+      <li>ООО “Ололо”</li>
+      <li>ИНН 7720885046
+      </li>
+      <li>КПП 772001001</li>
+      <li>ОГРН 1237700003474 </li>
+    </ul>
+    <ul class="footer_link footer_link2">
+      <li><a href="../Политика конфедициальности.docx">Политика конфиденциальности</a></li>
+      <li><a href="../Пользовательское соглашение.docx">Пользовательское соглашение </a></li>
+      <li><a href="../Безопасность платежей.pdf">Безопасность платежей</a></li>
+      <li><a href="../Договор оферты.docx">Договор публичной оферты</a></li>
+    </ul>
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('../data/faq.xml')
+        .then(response => response.text())
+        .then(xmlString => {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+            const items = xmlDoc.getElementsByTagName('item');
+            
+            const container = document.querySelector('.vapros_result');
+            container.innerHTML = '';
+            
+            // Преобразуем коллекцию в массив объектов с полем open
+            let faqItems = [];
+            for (let i = 0; i < items.length; i++) {
+                const question = items[i].getElementsByTagName('question')[0].textContent;
+                const answer = items[i].getElementsByTagName('answer')[0].textContent;
+                faqItems.push({
+                    question: question,
+                    answer: answer,
+                    open: (i === 0) // первый вопрос открыт по умолчанию
+                });
+            }
+            
+            // Функция отрисовки аккордеона
+            function renderFaq() {
+                container.innerHTML = '';
+                faqItems.forEach((item, idx) => {
+                    const div = document.createElement('div');
+                    div.className = 'vopros_p';
+                    div.setAttribute('data-index', idx);
+                    div.innerHTML = `
+                        <h3>${item.question} <div class="accorimg"><span style="margin-bottom: 5px;">${item.open ? '-' : '+'}</span></div></h3>
+                        ${item.open ? `<p class="acor">${item.answer}</p>` : ''}
+                    `;
+                    container.appendChild(div);
+                });
+                
+                // Добавляю обработчики кликов
+                document.querySelectorAll('.vopros_p').forEach(div => {
+                    div.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const index = parseInt(div.getAttribute('data-index'));
+                        faqItems[index].open = !faqItems[index].open;
+                        renderFaq(); // перерисовываем
+                    });
+                });
+            }
+            
+            renderFaq();
+        })
+        .catch(error => {
+            console.error('Ошибка загрузки XML:', error);
+            document.querySelector('.vapros_result').innerHTML = '<p style="color: red; text-align: center;">Не удалось загрузить вопросы. Пожалуйста, обновите страницу.</p>';
+        });
+});
+</script>
+  <script src="../replace/bootstrap-replacement.js"></script>
+</body>
+
+</html>

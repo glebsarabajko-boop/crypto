@@ -1,0 +1,231 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+}
+
+.kurs_1 {
+  box-shadow: inset 0px -100px 500px rgba(255, 161, 11, 0.342);
+  padding: 40px 0;
+
+  .card1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  &_img {
+    width: 23%;
+    min-width: 300px;
+  }
+
+  &_text {
+    width: 60%;
+
+    h1 {
+      font-family: $font-amiko;
+      font-size: 43px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: $white;
+      margin-top: 30px;
+    }
+
+    p {
+      font-family: $font-amiko;
+      font-size: 30px;
+      font-weight: 400;
+      color: $white;
+    }
+
+    button {
+      background: $orange-main;
+      border: none;
+      padding: 18px 30px;
+      border-radius: $radius-small;
+      font-family: $font-amiko;
+      font-size: 25px;
+      font-weight: 400;
+    }
+  }
+}
+}
+
+// -------- Адаптивы --------
+
+@include max1450 {
+  .card1_text {
+    h1 { font-size: 30px; }
+    p { font-size: 20px; }
+    button { font-size: 23px; }
+  }
+}
+
+@include max800 {
+  .card1_text {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@include max700 {
+  .card1_text {
+    h1 { font-size: 25px; }
+    p { font-size: 15px; }
+    button { font-size: 15px; }
+  }
+}
+
+// -------- Блок kurs_2 --------
+
+.kurs_2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 550px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+
+  &_text {
+    width: 55%;
+
+    h1 {
+      font-family: $font-amiko;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 64px;
+      text-align: center;
+      color: $orange-main;
+    }
+
+    p {
+      font-family: $font-amiko;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 40px;
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  img {
+    width: 35%;
+    min-width: 300px;
+  }
+}
+
+@include max991 {
+  .kurs_2_text {
+    width: 90%;
+  }
+}
+
+@include max700 {
+  .kurs_2_text {
+    h1 { font-size: 25px; }
+    p { font-size: 15px; line-height: 16px; }
+  }
+}
+
+// -------- Блок kurs_3 --------
+
+.kurs_3 {
+  padding: 30px 0 70px;
+
+  h1 {
+    font-family: $font-amiko;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    color: $orange-main;
+  }
+
+  .kurs3_cards {
+    display: flex;
+    justify-content: space-around;
+    max-width: 90%;
+    margin: 40px auto 0;
+    text-align: center;
+    flex-wrap: wrap;
+
+    p {
+      font-family: $font-amiko;
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+
+  .kurs3_card {
+    max-width: 400px;
+    margin-top: 20px;
+  }
+}
+
+@include max700 {
+  .kurs_3 {
+    h1 { font-size: 25px; }
+
+    .kurs3_cards {
+      p { font-size: 15px; }
+      img { width: 70px; }
+    }
+  }
+}
+
+// -------- Блок kurs4 --------
+
+.kurs4 {
+  padding: 30px 0;
+  background: $orange-main;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  h1 {
+    font-family: $font-amiko;
+    font-size: 48px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  p {
+    font-family: $font-amiko;
+    font-size: 30px;
+    font-weight: 400;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  button {
+    padding: 18px 40px;
+    border-radius: $radius-small;
+    color: $orange-main;
+    font-family: $font-amiko;
+    font-size: 32px;
+    font-weight: 400;
+    background-color: $black;
+    border: none;
+  }
+
+}
+
+@include max700 {
+  .kurs4 {
+    h1 { font-size: 25px; }
+    p { font-size: 15px; }
+    button { font-size: 15px; margin-top: 30px; }
+  }
+}

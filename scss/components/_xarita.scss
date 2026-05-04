@@ -1,0 +1,92 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+body {
+  background-color: $black;
+  position: relative;
+}
+
+.btn1 {
+  max-width: 592px;
+  width: 70%;
+  height: 82px;
+  margin-top: 30px;
+  border-radius: 100px;
+  border: 1px solid $orange-main;
+  background-color: $orange-main;
+  color: $white;
+  font-size: 32px;
+}
+
+.left_img {
+  position: absolute;
+  right: 0;
+  top: 300px;
+  z-index: -1;
+  width: 20%;
+}
+
+.right_img {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  z-index: -1;
+  width: 20%;
+}
+
+iframe {
+  max-width: 1496px;
+  width: 95%;
+  height: 810px;
+  border-radius: 100px;
+  margin-top: 32px;
+}
+
+p {
+  margin-top: 1%;
+  color: $white;
+  font-size: 32px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.murojat {
+  margin-top: 2%;
+  max-width: 1265px;
+  width: 95%;
+  border: 5px solid rgba($orange-main, 0.69);
+  border-radius: 100px;
+  @include flex-center;
+}
+
+
+@include max900 {
+  .btn1 {
+    height: 60px;
+    border: none;
+  }
+
+  .murojat {
+    border: none !important;
+    margin-top: 30px;
+  }
+}
+
+@include max850 {
+  p {
+    font-size: 15px;
+  }
+}
+
+@include max700 {
+  iframe {
+    height: 400px;
+  }
+}
+
+@include max600 {
+  .btn1 {
+    height: 40px;
+    font-size: 23px;
+  }
+}

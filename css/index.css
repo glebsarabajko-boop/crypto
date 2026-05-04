@@ -1,0 +1,512 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap");
+@import '../../style1.css';
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content {
+  background: #906315 !important;
+  border-radius: 100px !important;
+}
+
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-title-choose {
+  color: #fff;
+  text-align: center;
+  font-family: "Amiko", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 67.2px;
+}
+
+.modal-description {
+  color: #fff;
+  text-align: left;
+  font-family: "Amiko", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.modal-price {
+  text-align: center;
+  font-family: "Amiko", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.modal-body label {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  background: transparent !important;
+  border: 1px solid #000 !important;
+}
+.form-control:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.modal-btn {
+  height: 50px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 35px;
+  background: #FFA30B !important;
+  border-radius: 30px !important;
+  color: #000;
+  text-align: center;
+  font-family: "Amiko", sans-serif;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
+.close-btn {
+  margin-top: 28px;
+  margin-right: 31px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.logo_clone {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  line-height: 40px;
+  color: #000;
+}
+.logo_clone img {
+  width: 60px;
+}
+
+.contact_clone li {
+  font-family: "Amiko", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #000;
+}
+
+.navbar_clone {
+  background: #F39D12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar_clone ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+.navbar_clone ul i {
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+}
+
+body {
+  background-color: #000;
+}
+
+.button_clone {
+  padding: 8px 16px;
+  border-radius: 35px;
+  background-color: #000;
+  color: #F39D12;
+  border: none;
+}
+
+@media (max-width: 991px) {
+  .button_clone {
+    display: none;
+  }
+  .logo_clone {
+    font-size: 20px;
+  }
+  .navbar_clone ul {
+    gap: 0;
+  }
+}
+@media (max-width: 825px) {
+  .navbar_clone ul {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .navbar_clone {
+    height: 80px;
+  }
+  .navbar_clone ul li {
+    font-size: 12px;
+  }
+  .navbar_clone ul i {
+    font-size: 15px;
+    top: 2px;
+  }
+  .logo_clone {
+    font-size: 12px;
+  }
+  .logo_clone img {
+    height: 30px;
+    width: auto;
+  }
+}
+@media (max-width: 360px) {
+  .navbar_clone {
+    height: 80px;
+  }
+  .navbar_clone ul {
+    padding: 0;
+    margin: 0;
+  }
+  .navbar_clone ul li {
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar_clone ul i {
+    font-size: 10px;
+    top: 2px;
+  }
+  .navbar_clone .logo_clone img {
+    height: 20px;
+  }
+  .navbar_clone .logo_clone {
+    font-size: 11px;
+  }
+}
+.navbar2 {
+  background: rgba(255, 163, 11, 0.47);
+}
+.navbar2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 90%;
+  list-style: none;
+}
+.navbar2 ul a {
+  text-decoration: none;
+  font-family: "Amiko", sans-serif;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (max-width: 1200px) and (min-width: 991px) {
+  .navbar-expand-lg .nav-link {
+    font-family: "Amiko", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #000;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-expand-lg .navbar-brand {
+    font-size: 3vw;
+  }
+  .link2 {
+    display: block !important;
+  }
+  .navbar2 {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .navbar-expand-lg .navbar-brand img {
+    height: 40px;
+  }
+  .navbar-expand-lg .navbar-brand {
+    font-size: 4vw;
+  }
+}
+.navbar-expand-lg {
+  background: #F39D12;
+}
+.navbar-expand-lg .navbar-brand {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  line-height: 40px;
+}
+.navbar-expand-lg .navbar-brand img {
+  height: 55px;
+}
+.navbar-expand-lg .nav-link {
+  position: relative;
+  -webkit-transition: color 0.3s 0.3s ease;
+  transition: color 0.3s 0.3s ease;
+}
+.navbar-expand-lg .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFA30B;
+  -webkit-transition: width 0.3s 0.3s ease;
+  transition: width 0.3s 0.3s ease;
+}
+.navbar-expand-lg .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-expand-lg .nav-link {
+  font-family: "Amiko", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #000;
+}
+.navbar-expand-lg .nav-link i {
+  font-size: 26px;
+  position: relative;
+  top: 4px;
+  color: #000;
+}
+.navbar-expand-lg .navbar_btn {
+  padding: 8px 16px;
+  border-radius: 35px;
+  background-color: #000;
+  color: #F39D12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#1a1a1a));
+  background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+  border-top: 1px solid rgba(255, 163, 11, 0.3);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-block h4 {
+  font-family: "Amiko", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFA30B;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.footer-block p {
+  font-family: "Amiko", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.footer-block a {
+  text-decoration: none;
+  color: #fff;
+  /* Никаких transition, transform, hover-эффектов */
+}
+
+.footer-block a:hover {
+  color: #FFA30B; /* только изменение цвета, без анимации */
+}
+
+/* Мобильные устройства (до 768px): колонка, центрирование, показываем мобильную версию документов */
+@media (max-width: 768px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer > ul {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  /* Показываем блок .footer_link1 (мобильная версия документов) */
+  .footer_link1 {
+    display: block !important;
+  }
+  /* Скрываем десктопную версию */
+  .footer_link2 {
+    display: none !important;
+  }
+  /* Центрируем все блоки */
+  .footer_page, .footer_page2, .footer_link, .footer_link1 {
+    text-align: center !important;
+  }
+}
+/* Планшеты и десктоп — три колонки в строку */
+@media (min-width: 769px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ровно три колонки */
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: left;
+  }
+  /* Убираем лишние flex-свойства, если они были */
+  footer > ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  /* Показываем десктопную версию документов, скрываем мобильную */
+  .footer_link1 {
+    display: none !important;
+  }
+  .footer_link2 {
+    display: block !important;
+  }
+  /* Выравнивание содержимого */
+  .footer_page,
+  .footer_page2,
+  .footer_link,
+  .footer_link2 {
+    text-align: left;
+  }
+}
+@media (max-width: 991px) {
+  .button-worring {
+    padding: 8px 30px !important;
+    font-size: clamp(16px, 4.2vw, 26px) !important;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    position: relative;
+    overflow: hidden;
+  }
+  header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+  }
+  header .text {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    width: 100%;
+    padding: 10% 5%;
+    text-align: center;
+    min-height: auto;
+  }
+  header .text h1,
+  header .text h3,
+  header .text h4 {
+    color: white;
+  }
+  .button-worring {
+    padding: 10px 36px;
+    font-size: clamp(18px, 4.8vw, 30px);
+  }
+  header .text h1 {
+    font-size: 30px;
+  }
+  header .text h3 {
+    font-size: 20px;
+  }
+  header .text h4 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .button-worring {
+    padding: 8px 24px !important;
+    font-size: clamp(15px, 4.8vw, 22px) !important;
+  }
+}

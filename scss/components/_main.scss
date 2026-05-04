@@ -1,0 +1,185 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $black;
+  font-family: $font-amiko;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+
+
+.header {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(180deg, $black 70%, #6B4F31 100%);
+
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: $orange-main;
+    text-align: center;
+  }
+
+  p {
+    font-size: 24px;
+    color: $white;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  button {
+    margin: 30px auto 0;
+    display: block;
+    padding: 12px 40px;
+    border-radius: 35px;
+    border: none;
+    background-color: $orange-main;
+    color: $black;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+
+
+.cards_section {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .card {
+    width: 30%;
+    min-width: 300px;
+    background: $gray-50;
+    border-radius: 35px;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    h3 {
+      color: $orange-main;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $white;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+
+
+
+.section_image_left,
+.section_image_right {
+  width: 90%;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  img {
+    width: 40%;
+    min-width: 300px;
+  }
+
+  .text {
+    width: 50%;
+    min-width: 300px;
+
+    h2 {
+      font-size: 42px;
+      color: $orange-main;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $white;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+}
+
+.section_image_right {
+  flex-direction: row-reverse;
+}
+
+
+
+.cta_block {
+  width: 100%;
+  padding: 60px 0;
+  background-color: $orange-main;
+  text-align: center;
+
+  h2 {
+    font-size: 48px;
+    color: $black;
+  }
+
+  p {
+    font-size: 28px;
+    color: $black;
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 15px 50px;
+    border-radius: 35px;
+    border: none;
+    background-color: $black;
+    color: $orange-main;
+    font-size: 28px;
+  }
+}
+
+
+
+@include max991 {
+  .header h1 { font-size: 32px; }
+  .header p { font-size: 18px; }
+
+  .cards_section .card {
+    width: 45%;
+  }
+
+  .section_image_left,
+  .section_image_right {
+    img { width: 90%; }
+    .text { width: 90%; margin-top: 20px; }
+  }
+}
+
+@include max700 {
+  .header h1 { font-size: 26px; }
+  .header p { font-size: 16px; }
+
+  .cards_section .card {
+    width: 90%;
+  }
+
+  .cta_block h2 { font-size: 28px; }
+  .cta_block p { font-size: 18px; }
+  .cta_block button { font-size: 18px; padding: 10px 30px; }
+}

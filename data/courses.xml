@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course>
+        <title>Основы Криптовалют и Блокчейн Технологий</title>
+        <purpose>Предоставление учащимся глубоких базовых знаний о криптовалютах, их функционировании и основах технологии блокчейн.</purpose>
+        <image>../image/kurs/Rectangle 4.png</image>
+        <tariffLink>./tarif_osnovnoy.html</tariffLink>
+    </course>
+    <course>
+        <title>Торговля и Инвестиции в Криптовалюты</title>
+        <purpose>Научить учащихся основам торговли и инвестирования в криптовалюты, анализу рынка и стратегиям управления рисками.</purpose>
+        <image>../image/kurs/Rectangle 5.png</image>
+        <tariffLink>./tarif_targovaya.html</tariffLink>
+    </course>
+    <course>
+        <title>Блокчейн Разработка и Прога</title>
+        <purpose>Предоставление учащимся глубоких знаний и практических навыков в области разработки на блокчейне, включая создание смарт-контрактов и децентрализованных приложений (DApps).</purpose>
+        <image>../image/kurs/Rectangle 5 (1).png</image>
+        <tariffLink>./tarif_blockchange.html</tariffLink>
+    </course>
+</courses> 

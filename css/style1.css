@@ -1,0 +1,64 @@
+@import '../../style1.css';
+@media (max-width: 991px) {
+  .button-worring {
+    padding: 8px 30px !important;
+    font-size: clamp(16px, 4.2vw, 26px) !important;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    position: relative;
+    overflow: hidden;
+  }
+  header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+  }
+  header .text {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    width: 100%;
+    padding: 10% 5%;
+    text-align: center;
+    min-height: auto;
+  }
+  header .text h1,
+  header .text h3,
+  header .text h4 {
+    color: white;
+  }
+  .button-worring {
+    padding: 10px 36px;
+    font-size: clamp(18px, 4.8vw, 30px);
+  }
+  header .text h1 {
+    font-size: 30px;
+  }
+  header .text h3 {
+    font-size: 20px;
+  }
+  header .text h4 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .button-worring {
+    padding: 8px 24px !important;
+    font-size: clamp(15px, 4.8vw, 22px) !important;
+  }
+}

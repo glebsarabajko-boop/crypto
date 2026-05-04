@@ -1,0 +1,110 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.carusel_div {
+  padding-top: 2.083vw;
+  padding-bottom: 3.125vw;
+  width: 100%;
+  background: linear-gradient(180deg, $black 70.77%, #6B4F31 100%);
+}
+
+.carousel1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.083vw;
+  padding-top: 1.302vw;
+  width: 93%;
+  margin: auto;
+}
+
+.carusel_four_card_div {
+  background: $gray-50;
+  border-radius: 3.646vw;
+  padding: 1.042vw 3.125vw;
+  width: calc(33.333% - 2.083vw);
+  min-width: 300px;
+  flex: 1 1 auto;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 163, 11, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .carusel_four_card_div_text {
+    display: flex;
+    align-items: center;
+    font-family: $font-amiko;
+    gap: 1.042vw;
+    margin-left: 1.042vw;
+    margin-bottom: 0.7vw;
+
+    h1 {
+      color: $orange-main;
+      font-size: 1.875vw;
+      font-weight: 400;
+      font-family: $font-amiko;
+      line-height: 2.501vw;
+    }
+
+    p {
+      color: $white;
+      font-weight: 400;
+      font-family: $font-amiko;
+      font-size: 1.667vw;
+      line-height: 2.167vw;
+    }
+  }
+
+  .carusel_four_card_div_desc {
+    color: $white;
+    font-weight: 400;
+    font-size: 1.667vw;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    margin-top: 0.521vw;
+    font-family: $font-amiko;
+  }
+}
+
+@include max991 {
+  .carusel_div .carusel_four_card_div {
+    width: calc(50% - 2.083vw);
+    max-width: 600px;
+    margin-bottom: 20px;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .carusel_four_card_div_text h1 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carusel_div .carusel_four_card_div {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .carusel_four_card_div_desc {
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    letter-spacing: 0.01em;
+  }
+  .carusel_four_card_div_text h1 {
+    font-size: 26px !important;
+  }
+}

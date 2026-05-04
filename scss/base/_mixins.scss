@@ -1,0 +1,45 @@
+@mixin max1450 { @media (max-width: 1450px) { @content; } }
+@mixin max1200 { @media (max-width: 1200px) { @content; } }
+@mixin max1167 { @media (max-width: 1167px) { @content; } }
+@mixin max991  { @media (max-width: 991px)  { @content; } }
+@mixin max976  { @media (max-width: 976px)  { @content; } }
+@mixin max933  { @media (max-width: 933px)  { @content; } }
+@mixin max900  { @media (max-width: 900px)  { @content; } }
+@mixin max850  { @media (max-width: 850px)  { @content; } }
+@mixin max825  { @media (max-width: 825px)  { @content; } }
+@mixin max800  { @media (max-width: 800px)  { @content; } }
+@mixin max770  { @media (max-width: 770px)  { @content; } }
+@mixin max743  { @media (max-width: 743px)  { @content; } }
+@mixin max700  { @media (max-width: 700px)  { @content; } }
+@mixin max668  { @media (max-width: 668px)  { @content; } }
+@mixin max617  { @media (max-width: 617px)  { @content; } }
+@mixin max600  { @media (max-width: 600px)  { @content; } }
+@mixin max585  { @media (max-width: 585px)  { @content; } }
+@mixin max539  { @media (max-width: 539px)  { @content; } }
+@mixin max521  { @media (max-width: 521px)  { @content; } }
+@mixin max500  { @media (max-width: 500px)  { @content; } }
+@mixin max475  { @media (max-width: 475px)  { @content; } }
+@mixin max470  { @media (max-width: 470px)  { @content; } }
+@mixin max450  { @media (max-width: 450px)  { @content; } }
+@mixin max404  { @media (max-width: 404px)  { @content; } }
+@mixin max400  { @media (max-width: 400px)  { @content; } }
+@mixin max360  { @media (max-width: 360px)  { @content; } }
+@mixin max790  { @media (max-width: 790px)  { @content; } }
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease) {
+  transition: $property $duration $ease;
+}
+
+@mixin active-press {
+  &:active {
+    transform: scale(0.97);
+  }
+}

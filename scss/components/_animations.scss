@@ -1,0 +1,108 @@
+@keyframes gentlePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(243, 157, 18, 0.4);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(243, 157, 18, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(243, 157, 18, 0);
+  }
+}
+
+
+@keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.head_about .head_button {
+  transition: all 0.3s ease;
+  &:hover {
+    animation: gentlePulse 0.6s ease;
+    background-color: darken(#F39D12, 5%);
+    transform: translateY(-2px);
+  }
+}
+
+.statistika {
+  opacity: 0;
+  animation: fadeInScale 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--order, 0));
+  &:nth-child(1) { --order: 1; }
+  &:nth-child(2) { --order: 2; }
+  &:nth-child(3) { --order: 3; }
+  &:nth-child(4) { --order: 4; }
+}
+
+
+
+.head_blob-svg1,
+.head_blob-svg2,
+.head_blob-svg3 {
+  animation: float 10s ease-in-out infinite alternate, slowSpin 30s linear infinite;
+}
+
+.button-worring, 
+.head_button, 
+.cu_button, 
+.test_button, 
+.pc_button,
+.form_submit,
+.modal-btn,
+.tarif .card22 button,
+.navbar_btn,
+.buton_demo,
+.kurs_1 button,
+.kurs4 button,
+.oxir_button button,
+button:not(.close):not(.navbar-toggler) {
+  @include transition(transform 0.2s, box-shadow 0.3s, background 0.3s);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  @include active-press;
+}
+
+
+/* Эффект подчёркивания при наведении на ссылки меню */
+.navbar-expand-lg .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-expand-lg .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFA30B;
+  transition: width 0.3s ease;
+}
+
+.navbar-expand-lg .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-expand-lg .nav-link:hover {
+  color: #000 !important;
+}

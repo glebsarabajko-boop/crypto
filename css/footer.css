@@ -1,0 +1,126 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#1a1a1a));
+  background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+  border-top: 1px solid rgba(255, 163, 11, 0.3);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-block h4 {
+  font-family: "Amiko", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFA30B;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.footer-block p {
+  font-family: "Amiko", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.footer-block a {
+  text-decoration: none;
+  color: #fff;
+  /* Никаких transition, transform, hover-эффектов */
+}
+
+.footer-block a:hover {
+  color: #FFA30B; /* только изменение цвета, без анимации */
+}
+
+/* Мобильные устройства (до 768px): колонка, центрирование, показываем мобильную версию документов */
+@media (max-width: 768px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer > ul {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  /* Показываем блок .footer_link1 (мобильная версия документов) */
+  .footer_link1 {
+    display: block !important;
+  }
+  /* Скрываем десктопную версию */
+  .footer_link2 {
+    display: none !important;
+  }
+  /* Центрируем все блоки */
+  .footer_page, .footer_page2, .footer_link, .footer_link1 {
+    text-align: center !important;
+  }
+}
+/* Планшеты и десктоп — три колонки в строку */
+@media (min-width: 769px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ровно три колонки */
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    text-align: left;
+  }
+  /* Убираем лишние flex-свойства, если они были */
+  footer > ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  /* Показываем десктопную версию документов, скрываем мобильную */
+  .footer_link1 {
+    display: none !important;
+  }
+  .footer_link2 {
+    display: block !important;
+  }
+  /* Выравнивание содержимого */
+  .footer_page,
+  .footer_page2,
+  .footer_link,
+  .footer_link2 {
+    text-align: left;
+  }
+}

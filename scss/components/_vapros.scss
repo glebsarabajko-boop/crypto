@@ -1,0 +1,229 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $black !important;
+}
+
+.navbar-expand-lg {
+  background: $orange-dark;
+
+  .navbar-brand {
+    img {
+      height: 55px;
+    }
+
+    font-family: $font-comfortaa;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 40px;
+  }
+
+  .nav-link {
+    font-family: $font-amiko;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $black;
+
+    i {
+      font-size: 30px;
+      position: relative;
+      top: 4px;
+      color: $black;
+    }
+  }
+
+  .navbar_btn {
+    padding: 8px 16px;
+    border-radius: 35px;
+    background-color: $black;
+    color: $orange-dark;
+  }
+}
+
+.link2 {
+  display: none !important;
+}
+
+.navbar2 {
+  background: rgba($orange-main, 0.47);
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    height: 50px;
+    width: 90%;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      font-family: $font-amiko;
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+  }
+}
+
+/* Кнопка */
+.button-worring {
+  border: none;
+  font-family: $font-inter;
+  padding: .7vw 3vw;
+  border-radius: 35px;
+  background-color: $orange-dark;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+/* Блок вопросов */
+.vopros {
+  h2 {
+    padding-top: 30px;
+    font-family: $font-amiko;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: center;
+    color: $orange-dark;
+  }
+}
+
+.vopros_p {
+  width: 90%;
+  margin: auto;
+  background: $gray-50;
+  padding: 30px;
+  cursor: pointer;
+  transition: 2s;
+  border-radius: 35px;
+  margin-bottom: 20px;
+
+  .acor {
+    text-align: center;
+    color: $white;
+    transition: 1s;
+    font-size: 1rem;
+  }
+
+ h3 {
+    display: flex;
+    color: $orange-dark;
+    align-items: center;
+    font-size: 1.4rem;     
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .accorimg {
+    border: 1px dashed $orange-dark;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    @include flex-center;
+    margin-left: 20px;
+    padding: 10px;
+  }
+}
+
+/* FOOTER (дублируется — но оставляем для идентичности CSS) */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+
+  ul {
+    list-style: none;
+  }
+
+  .footer_page {
+    width: 25%;
+    min-width: 300px;
+
+    li {
+      font-family: $font-inter;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 42px;
+      letter-spacing: -1px;
+      text-align: left;
+      color: $white;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-family: $font-inter;
+      }
+    }
+  }
+
+  .footer_page2 {
+    li {
+      font-family: $font-inter;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 42px;
+      text-align: center;
+      color: $white;
+    }
+  }
+
+  .footer_link {
+    width: 25%;
+    min-width: 300px;
+    font-family: $font-inter;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: right;
+    color: $white;
+
+    a {
+      color: $white !important;
+    }
+  }
+
+  .footer_link1 {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .vopros_p {
+    padding: 20px;
+    h3 {
+      font-size: 1.2rem;   /* чуть меньше, но всё ещё крупнее ответа */
+    }
+    .acor {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .vopros_p {
+    h3 {
+      font-size: 1.1rem;
+    }
+    .acor {
+      font-size: 0.85rem;
+    }
+  }
+}

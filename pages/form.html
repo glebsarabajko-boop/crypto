@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoMaster Academy - Обратная связь</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../image/Crypto.png" type="image/x-icon">
+  <link rel="stylesheet" href="../replace/bootstrap-replacement.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="form-page">
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html"><img src="../image/Vector.png" alt="image"> CryptoMaster Academy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link link2" href="../index.html">о нас</a></li>
+          <li class="nav-item"><a class="nav-link link2" href="./platforma.html">платформа</a></li>
+          <li class="nav-item"><a class="nav-link link2" href="./kurs.html">курсы</a></li>
+          <li class="nav-item"><a class="nav-link link2" href="./carousel.html">отзывы</a></li>
+          <li class="nav-item"><a class="nav-link link2" href="../index.html#contact">соцсети</a></li>
+          <li class="nav-item"><a class="nav-link link2" href="./xarita.html">контакты</a></li>
+          <li class="nav-item">
+  <a class="nav-link link2" href="./form.html"> <i class='bx bx-message'></i>оставить отзыв</a>
+</li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class='bx bxs-phone'></i>+375(29)536-13-37</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class='bx bx-envelope'></i> glebsarabajko@gmail.com</a></li>
+        </ul>
+        <a href="./kurs.html" style="color: black !important; ">
+          <form class="d-flex" role="search">
+            <button class="btn navbar_btn" type="button">записаться на курс</button>
+          </form>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="navbar2">
+    <ul>
+      <li><a href="../index.html">о нас</a></li>
+      <li><a href="./platforma.html">платформа</a></li>
+      <li><a href="./kurs.html">курсы</a></li>
+      <li><a href="./carousel.html">отзывы</a></li>
+      <li><a href="../index.html#contact">соцсети</a></li>
+      <li><a href="./xarita.html">контакты</a></li>
+      <li><a href="./form.html">оставить отзыв</a></li>
+    </ul>
+  </div>
+
+  <div class="form_background-elements">
+    <div class="form_blob-svg1"></div>
+    <div class="form_blob-svg2"></div>
+    <div class="form_blob-svg3"></div>
+  </div>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main class="form_bd-container">
+    <section class="form_statistics-form">
+      <h1 class="form_home__title">Помогите нам улучшить сайт!</h1>
+      <div class="form_form-container">
+        <p class="form_title">Ваш отзыв</p>
+        <form id="feedbackForm" class="form_form">
+          <div class="form_input-group">
+            <label for="gender">Ваш пол</label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Выберите пол</option>
+              <option value="male">Мужской</option>
+              <option value="female">Женский</option>
+            </select>
+          </div>
+          <div class="form_input-group">
+            <label for="age">Ваш возраст</label>
+            <input type="number" id="age" name="age" placeholder="Введите ваш возраст" min="10" max="100" required>
+          </div>
+          <div class="form_input-group">
+            <label for="category">Кто вы?</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Выберите категорию</option>
+              <option value="applicant">Noob</option>
+              <option value="student">Pro</option>
+              <option value="parent">Hacker</option>
+            </select>
+          </div>
+          <div class="form_input-group">
+            <label for="purpose">С какой целью вы посетили сайт?</label>
+            <select id="purpose" name="purpose" required>
+              <option value="" disabled selected>Выберите цель</option>
+              <option value="find_typology">Узнать о криптовалютах</option>
+              <option value="choose_faculty">Выбрать курс</option>
+              <option value="explore">Просто посмотреть</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="form_input-group form_rating-group">
+            <label>Оцените сайт (из 5 звёзд)</label>
+            <div class="form_rating">
+              <input value="5" name="rating" id="star5" type="radio" required>
+              <label title="5 звёзд" for="star5"></label>
+              <input value="4" name="rating" id="star4" type="radio">
+              <label title="4 звезды" for="star4"></label>
+              <input value="3" name="rating" id="star3" type="radio">
+              <label title="3 звезды" for="star3"></label>
+              <input value="2" name="rating" id="star2" type="radio">
+              <label title="2 звезды" for="star2"></label>
+              <input value="1" name="rating" id="star1" type="radio">
+              <label title="1 звезда" for="star1"></label>
+            </div>
+          </div>
+          <div class="form_input-group">
+            <label for="suggestions">Ваши пожелания по улучшению сайта</label>
+            <textarea id="suggestions" name="suggestions" placeholder="Напишите, что можно улучшить..." rows="4" maxlength="500"></textarea>
+          </div>
+          <button type="submit" class="form_submit">Отправить</button>
+        </form>
+        <div id="form-message" style="display: none; text-align: center; margin-top: 1rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="footer_page">
+      <li>Контакты:</li>
+      <li><a href="#">Почта: glebsarabajko@gmail.com</a></li>
+      <li><a href="#">+375(29)536-13-37</a></li>
+      <li><a href="#">Юридический адрес:</a></li>
+      <li><a href="#">г. Минск, ул. Белорусская, д. 19</a></li>
+    </ul>
+    <ul class="footer_link footer_link1">
+      <li><a href="../Политика конфедициальности.docx">Политика конфиденциальности</a></li>
+      <li><a href="../Пользовательское соглашение.docx">Пользовательское соглашение </a></li>
+      <li><a href="../Безопасность платежей.pdf">Безопасность платежей</a></li>
+      <li><a href="../Договор оферты.docx">Договор публичной оферты</a></li>
+    </ul>
+    <ul style="text-align: center;" class="footer_page2">
+      <li>ООО “Ололо”</li>
+      <li>ИНН 7720885046</li>
+      <li>КПП 772001001</li>
+      <li>ОГРН 1237700003474</li>
+    </ul>
+    <ul class="footer_link footer_link2">
+      <li><a href="../Политика конфедициальности.docx">Политика конфиденциальности</a></li>
+      <li><a href="../Пользовательское соглашение.docx">Пользовательское соглашение </a></li>
+      <li><a href="../Безопасность платежей.pdf">Безопасность платежей</a></li>
+      <li><a href="../Договор оферты.docx">Договор публичной оферты</a></li>
+    </ul>
+  </footer>
+
+  <script src="../replace/bootstrap-replacement.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('feedbackForm');
+      const messageDiv = document.getElementById('form-message');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Простая проверка заполнения
+        const gender = document.getElementById('gender').value;
+        const age = document.getElementById('age').value;
+        const category = document.getElementById('category').value;
+        const purpose = document.getElementById('purpose').value;
+        const rating = document.querySelector('input[name="rating"]:checked');
+
+        if (!gender || !age || !category || !purpose || !rating) {
+          messageDiv.style.display = 'block';
+          messageDiv.style.color = '#ff9800';
+          messageDiv.textContent = 'Пожалуйста, заполните все обязательные поля.';
+          return;
+        }
+
+        // митация отправки
+        messageDiv.style.display = 'block';
+        messageDiv.style.color = '#4caf50';
+        messageDiv.textContent = 'Спасибо за ваш отзыв! Мы обязательно учтём ваши пожелания.';
+        form.reset();
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 5000);
+      });
+    });
+  </script>
+</body>
+
+</html>
+

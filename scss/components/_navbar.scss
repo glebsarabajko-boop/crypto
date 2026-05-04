@@ -1,0 +1,334 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.modal-content {
+  background: #906315 !important;
+  border-radius: 100px !important;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title-choose {
+  color: $white;
+  text-align: center;
+  font-family: $font-amiko;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 67.2px;
+}
+
+.modal-description {
+  color: $white;
+  text-align: left;
+  font-family: $font-amiko;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.modal-price {
+  text-align: center;
+  font-family: $font-amiko;
+  font-size: 36px;
+  font-weight: 800;
+  color: $white;
+}
+
+.modal-body label {
+  color: $white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  background: transparent !important;
+  border: 1px solid $black !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.modal-btn {
+  height: 50px;
+  width: 80%;
+  @include flex-center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 35px;
+  background: $orange-main !important;
+  border-radius: 30px !important;
+  color: $black;
+  text-align: center;
+  font-family: $font-amiko;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
+.close-btn {
+  margin-top: 28px;
+  margin-right: 31px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.logo_clone {
+  font-family: $font-comfortaa;
+  font-weight: 700;
+  font-size: 1.5vw;
+  line-height: 40px;
+  color: $black;
+
+  img {
+    width: 60px;
+  }
+}
+
+.contact_clone li {
+  font-family: $font-amiko;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  color: $black;
+}
+
+.navbar_clone {
+  background: $orange-dark;
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+    i {
+      font-size: 30px;
+      position: relative;
+      top: 5px;
+    }
+  }
+}
+
+body {
+  background-color: $black;
+}
+
+.button_clone {
+  padding: 8px 16px;
+  border-radius: 35px;
+  background-color: $black;
+  color: $orange-dark;
+  border: none;
+}
+
+
+@include max991 {
+  .button_clone {
+    display: none;
+  }
+
+  .logo_clone {
+    font-size: 20px;
+  }
+
+  .navbar_clone ul {
+    gap: 0;
+  }
+}
+
+@include max825 {
+  .navbar_clone ul {
+    display: block;
+  }
+}
+
+@include max600 {
+  .navbar_clone {
+    height: 80px;
+
+    ul li {
+      font-size: 12px;
+    }
+
+    ul i {
+      font-size: 15px;
+      top: 2px;
+    }
+  }
+
+  .logo_clone {
+    font-size: 12px;
+
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+}
+
+@include max360 {
+  .navbar_clone {
+    height: 80px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+      }
+
+      i {
+        font-size: 10px;
+        top: 2px;
+      }
+    }
+
+    .logo_clone img {
+      height: 20px;
+    }
+
+    .logo_clone {
+      font-size: 11px;
+    }
+  }
+}
+
+
+
+.navbar2 {
+  background: rgba($orange-main, 0.47);
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    height: 50px;
+    width: 90%;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      font-family: $font-amiko;
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+  }
+}
+
+@include max1200 {
+  @media (min-width: 991px) {
+    .navbar-expand-lg .nav-link {
+      font-family: $font-amiko;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 27px;
+      color: $black;
+    }
+  }
+}
+
+@include max991 {
+  .navbar-expand-lg .navbar-brand {
+    font-size: 3vw;
+  }
+
+  .link2 {
+    display: block !important;
+  }
+
+  .navbar2 {
+    display: none;
+  }
+}
+
+@include max600 {
+  .navbar-expand-lg .navbar-brand img {
+    height: 40px;
+  }
+
+  .navbar-expand-lg .navbar-brand {
+    font-size: 4vw;
+  }
+}
+
+
+.navbar-expand-lg {
+  background: $orange-dark;
+
+  .navbar-brand {
+    font-family: $font-comfortaa;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 40px;
+
+
+    img {
+      height: 55px;
+    }
+  }
+
+  .nav-link {
+
+position: relative;
+  @include transition(color 0.3s);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $orange-main;
+    @include transition(width 0.3s);
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+
+    font-family: $font-amiko;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $black;
+
+    i {
+      font-size: 26px;
+      position: relative;
+      top: 4px;
+      color: $black;
+    }
+  }
+
+  .navbar_btn {
+    padding: 8px 16px;
+    border-radius: 35px;
+    background-color: $black;
+    color: $orange-dark;
+  }
+}
