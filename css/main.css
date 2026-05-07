@@ -1059,15 +1059,16 @@ body {
   font-family: "Amiko", sans-serif;
   position: relative;
   top: -30px;
-  left: -100px;
+  left: -50px;
   scale: 1.2;
+  margin-top: 20px;
 }
 .platforma_img p {
   color: #fff;
   font-family: "Amiko", sans-serif;
   position: relative;
   top: -10px;
-  left: -100px;
+  left: -70px;
   scale: 1.2;
 }
 .platforma_img img {
@@ -1191,6 +1192,74 @@ body {
     top: 0;
     text-align: center;
     padding-left: 40px;
+  }
+}
+@media (max-width: 991px) and (min-width: 791px) {
+  .academy {
+    width: 94%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 24px;
+  }
+  .platforma_img {
+    width: 41%;
+    margin: 0;
+    padding-left: 0;
+    background-color: transparent;
+    text-align: left;
+  }
+  .platforma_img h1 {
+    position: static;
+    font-size: 48px;
+    line-height: 1.05;
+    text-align: left;
+    margin: 0 0 10px;
+    padding-left: 0;
+    scale: 1;
+  }
+  .platforma_img p {
+    position: static;
+    font-size: 38px;
+    text-align: left;
+    margin: 0 0 12px;
+    padding-left: 0;
+    scale: 1;
+  }
+  .platforma_img img {
+    position: static;
+    width: 100%;
+    max-width: 360px;
+    z-index: 0;
+    left: auto;
+    top: auto;
+  }
+  .platforma_onlayn {
+    width: 54%;
+    min-width: 0;
+    margin-top: 0;
+    padding: 14px;
+    border-radius: 48px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 163, 11, 0.55)), to(rgba(255, 163, 11, 0.9)));
+    background: linear-gradient(180deg, rgba(255, 163, 11, 0.55) 0%, rgba(255, 163, 11, 0.9) 100%);
+  }
+  .platforma_text {
+    margin-top: 0;
+    border-radius: 40px;
+    background: rgba(52, 52, 52, 0.94);
+  }
+  .platforma_text h3 {
+    padding-top: 18px;
+    margin-top: 0;
+    font-size: 27px;
+  }
+  .platforma_text p {
+    padding: 16px 24px 24px;
+    font-size: 19px;
+    line-height: 1.32;
   }
 }
 @media (max-width: 743px) {
@@ -1318,6 +1387,7 @@ body {
 .pejlar {
   width: 100%;
   height: 180px;
+  margin-bottom: 12px;
   border-radius: 100px;
   background: #FFA30B;
   display: -webkit-box;
@@ -1342,6 +1412,7 @@ body {
 .pejlar2 {
   width: 100%;
   padding: 30px 10px;
+  margin-bottom: 12px;
   border-radius: 100px;
   border: 3px solid #FFA30B;
   background: rgba(90, 90, 90, 0.55);

@@ -315,6 +315,31 @@ header .text h4 {
     text-align: center;
 }
 
+@media (min-width: 992px) {
+    .otzif {
+        min-height: 800px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .text_otzif {
+        border-radius: 46px;
+        padding: 36px 40px;
+    }
+
+    .text_otzif .orzif_text_h1 {
+        width: 68%;
+        font-size: 2.45vw;
+        margin-top: -84px;
+        margin-left: 5%;
+    }
+
+    .text_otzif p {
+        font-size: 1.25vw;
+        line-height: 1.5;
+    }
+}
+
 .dollor_img1 {
     position: absolute;
     top: 100px;
