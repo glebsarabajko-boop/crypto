@@ -1527,37 +1527,45 @@ body {
   width: 90%;
   margin: auto;
   background: rgba(90, 90, 90, 0.5019607843);
-  padding: 30px;
+  padding: 34px;
   cursor: pointer;
-  transition: 2s;
-  border-radius: 35px;
-  margin-bottom: 20px;
+  transition: 0.3s ease;
+  border-radius: 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(243, 157, 18, 0.35);
 }
 .vopros_p .acor {
-  text-align: center;
+  text-align: left;
   color: #fff;
-  transition: 1s;
-  font-size: 1rem;
+  transition: 0.3s ease;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-top: 12px;
 }
 .vopros_p h3 {
   display: flex;
+  justify-content: space-between;
   color: #F39D12;
-  align-items: center;
-  font-size: 1.4rem;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 1.55rem;
+  line-height: 1.4;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  gap: 16px;
 }
 .vopros_p .accorimg {
   border: 1px dashed #F39D12;
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
-  padding: 10px;
+  margin-left: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 /* FOOTER (дублируется — но оставляем для идентичности CSS) */
@@ -1616,21 +1624,21 @@ footer .footer_link1 {
 
 @media (max-width: 768px) {
   .vopros_p {
-    padding: 20px;
+    padding: 22px;
   }
   .vopros_p h3 {
-    font-size: 1.2rem; /* чуть меньше, но всё ещё крупнее ответа */
+    font-size: 1.3rem;
   }
   .vopros_p .acor {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
 }
 @media (max-width: 480px) {
   .vopros_p h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   .vopros_p .acor {
-    font-size: 0.85rem;
+    font-size: 0.98rem;
   }
 }
 body {
@@ -2423,6 +2431,201 @@ footer .footer_link2 {
   footer .footer_link2 {
     display: none;
   }
+}
+
+/* =========================
+   Unified spacing system
+   ========================= */
+:root {
+  --space-2xs: 6px;
+  --space-xs: 10px;
+  --space-sm: 14px;
+  --space-md: 20px;
+  --space-lg: 28px;
+  --space-xl: 40px;
+  --space-2xl: 56px;
+  --space-3xl: 72px;
+  --page-inline: clamp(12px, 3vw, 28px);
+  --section-gap: clamp(28px, 5vw, 64px);
+}
+
+/* Единый горизонтальный ритм для основных секций */
+body > header,
+body > main,
+body > section,
+body > .academy,
+body > .abuwim_fon,
+body > .kurs_1,
+body > .kurs_2,
+body > .kurs_3,
+body > .kurs4,
+body > .tarif,
+body > .vopros_p,
+body > .section_image_left,
+body > .section_image_right {
+  padding-left: var(--page-inline);
+  padding-right: var(--page-inline);
+}
+
+/* Единый вертикальный ритм между крупными блоками */
+body > main + main,
+body > main + section,
+body > section + main,
+body > section + section,
+body > header + main,
+body > header + section,
+body > .navbar2 + header,
+body > .navbar2 + main,
+body > .academy + footer,
+body > .abuwim_fon + footer {
+  margin-top: var(--section-gap);
+}
+
+/* Ровные внутренние отступы карточек и текстовых контейнеров */
+.card1,
+.card22,
+.kurs3_card,
+.vopros_p,
+.platforma_text,
+.text_otzif {
+  padding: var(--space-md);
+}
+
+/* Аккуратный вертикальный ритм текста */
+p + p {
+  margin-top: var(--space-sm);
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
+  margin-top: var(--space-xs);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-md: 16px;
+    --space-lg: 22px;
+    --section-gap: clamp(22px, 6vw, 40px);
+  }
+}
+
+/* Точечная полировка отступов на ключевых страницах */
+.kurs_1 {
+  padding: var(--space-xl) 0;
+}
+
+.kurs_1 .card1 {
+  margin-top: var(--space-lg);
+}
+
+.kurs_1 .card1_text h1 {
+  margin-top: var(--space-md);
+}
+
+.kurs_1 .card1_text a {
+  margin-top: var(--space-md);
+}
+
+.kurs_3 {
+  padding: var(--space-lg) 0 var(--space-2xl);
+}
+
+.kurs_3 .kurs3_cards {
+  margin: var(--space-xl) auto 0;
+}
+
+.kurs_3 .kurs3_card {
+  margin-top: var(--space-md);
+}
+
+.kurs4 {
+  padding: var(--space-lg) 0;
+}
+
+.kurs4 button {
+  margin-top: var(--space-lg);
+}
+
+.academy {
+  margin: var(--section-gap) auto 0;
+}
+
+.platforma_onlayn {
+  margin-top: var(--space-lg);
+  padding-right: var(--space-md);
+}
+
+.platforma_text {
+  margin-top: calc(var(--space-sm) * -1);
+}
+
+.platforma_text p {
+  padding: var(--space-md);
+}
+
+.title_tarif {
+  padding-top: var(--space-lg);
+}
+
+.tarif {
+  margin-bottom: var(--section-gap);
+}
+
+.tarif .card22 {
+  margin-top: var(--space-lg);
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif .card22 p {
+  flex-grow: 1;
+}
+
+.tarif .card22 h2:last-of-type {
+  margin-bottom: var(--space-md);
+}
+
+.tarif .card22 button {
+  margin-top: auto;
+}
+
+.oxirgi_div button {
+  margin-top: var(--space-2xl);
+}
+
+.kurs_text .button-worring {
+  margin-bottom: var(--space-lg);
+}
+
+.otzif .button-worring {
+  margin-top: var(--space-lg);
+}
+
+.contact-page-main {
+  margin-bottom: var(--space-lg);
+}
+
+.vopros_p .accorimg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.vopros_p .faq-toggle-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 1;
+  font-size: 20px;
+  transform: translateY(-1px);
 }
 
 /*# sourceMappingURL=style.css.map */

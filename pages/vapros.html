@@ -138,19 +138,19 @@
                     div.className = 'vopros_p';
                     div.setAttribute('data-index', idx);
                     div.innerHTML = `
-                        <h3>${item.question} <div class="accorimg"><span style="margin-bottom: 5px;">${item.open ? '-' : '+'}</span></div></h3>
+                        <h3>${item.question} <div class="accorimg"><span class="faq-toggle-symbol">${item.open ? '-' : '+'}</span></div></h3>
                         ${item.open ? `<p class="acor">${item.answer}</p>` : ''}
                     `;
                     container.appendChild(div);
                 });
                 
-                // Добавляю обработчики кликов
+
                 document.querySelectorAll('.vopros_p').forEach(div => {
                     div.addEventListener('click', (e) => {
                         e.stopPropagation();
                         const index = parseInt(div.getAttribute('data-index'));
                         faqItems[index].open = !faqItems[index].open;
-                        renderFaq(); // перерисовываем
+                        renderFaq(); 
                     });
                 });
             }
