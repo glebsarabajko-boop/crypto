@@ -65,6 +65,7 @@ header .text h4 {
 .button-worring {
 
     border: none;
+    margin: 25px;
     font-family: 'Inter', sans-serif;
     padding: .7vw 3vw .7vw 3vw;
     border-radius: 35px;
@@ -725,3 +726,4 @@ header img {
     width: auto;
   }
 }
+

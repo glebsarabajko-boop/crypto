@@ -1,118 +1,99 @@
 @import '../base/variables';
 @import '../base/mixins';
 
-* {
-  margin: 0;
+/* 1. Сброс для всех списков */
+footer ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba($black, 0.5);
+  padding: 1.5rem;
+  word-break: break-word;
 }
 
 footer {
-  background: linear-gradient(180deg, $black 0%, #1a1a1a 100%);
   border-top: 1px solid rgba($orange-main, 0.3);
-  padding: 2rem 1rem;
+  padding: 3rem 2%;
   margin-top: 2rem;
-}
-
-.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer-block {
-  flex: 1 1 200px;
-  min-width: 180px;
-}
-
-.footer-block h4 {
+/* Оранжевые заголовки */
+footer ul li:first-child,
+footer ul li:first-child a {
   font-family: $font-amiko;
+  font-weight: 700;
+  color: $orange-main !important;
+  text-transform: uppercase;
   font-size: 1.1rem;
-  font-weight: 600;
-  color: $orange-main;
-  margin-bottom: 0.8rem;
-  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  display: block;
+  text-decoration: none !important;
 }
 
-.footer-block p {
+/* Обычный текст */
+footer ul li:not(:first-child),
+footer ul li:not(:first-child) a {
   font-family: $font-amiko;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: $white;
-  margin-bottom: 0.4rem;
-}
-
-.footer-block a {
   text-decoration: none;
-  color: $white;
-  /* Никаких transition, transform, hover-эффектов */
 }
 
-.footer-block a:hover {
-  color: $orange-main; /* только изменение цвета, без анимации */
+footer a:hover {
+  color: $orange-main;
 }
 
-/* Мобильные устройства (до 768px): колонка, центрирование, показываем мобильную версию документов */
-@media (max-width: 768px) {
+/* Планшеты (768px – 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
   footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px;
   }
-  footer > ul {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+  footer ul {
+    padding: 1rem;
   }
-  /* Показываем блок .footer_link1 (мобильная версия документов) */
-  .footer_link1 {
-    display: block !important;
+  footer ul li:not(:first-child),
+  footer ul li:not(:first-child) a {
+    font-size: 0.85rem !important;
   }
-  /* Скрываем десктопную версию */
-  .footer_link2 {
-    display: none !important;
+}
+
+/* Мобильные устройства (до 767px) */
+@media (max-width: 767px) {
+  footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem;
   }
-  /* Центрируем все блоки */
-  .footer_page, .footer_page2, .footer_link, .footer_link1 {
+  footer ul {
+    width: 100% !important;
+    max-width: 450px;
+    height: auto;
+    align-items: center !important;
     text-align: center !important;
   }
-}
-
-/* Планшеты и десктоп — три колонки в строку */
-@media (min-width: 769px) {
-  footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* ровно три колонки */
-    gap: 1.5rem;
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0;
-    text-align: left;
+  footer ul li:first-child {
+    text-align: center !important;
   }
-
-  /* Убираем лишние flex-свойства, если они были */
-  footer > ul {
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Показываем десктопную версию документов, скрываем мобильную */
   .footer_link1 {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .footer_link2 {
     display: none !important;
-  }
-  .footer_link2 {
-    display: block !important;
-  }
-
-  /* Выравнивание содержимого */
-  .footer_page,
-  .footer_page2,
-  .footer_link,
-  .footer_link2 {
-    text-align: left;
   }
 }

@@ -322,129 +322,119 @@ body {
   color: #F39D12;
 }
 
-* {
-  margin: 0;
+/* 1. Сброс для всех списков */
+footer ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-footer {
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#1a1a1a));
-  background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
-  border-top: 1px solid rgba(255, 163, 11, 0.3);
-  padding: 2rem 1rem;
-  margin-top: 2rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  word-break: break-word;
 }
 
-.footer-block {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
-  min-width: 180px;
+footer {
+  border-top: 1px solid rgba(255, 163, 11, 0.3);
+  padding: 3rem 2%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer-block h4 {
+/* Оранжевые заголовки */
+footer ul li:first-child,
+footer ul li:first-child a {
   font-family: "Amiko", sans-serif;
+  font-weight: 700;
+  color: #FFA30B !important;
+  text-transform: uppercase;
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #FFA30B;
-  margin-bottom: 0.8rem;
-  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  display: block;
+  text-decoration: none !important;
 }
 
-.footer-block p {
+/* Обычный текст */
+footer ul li:not(:first-child),
+footer ul li:not(:first-child) a {
   font-family: "Amiko", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: #fff;
-  margin-bottom: 0.4rem;
-}
-
-.footer-block a {
   text-decoration: none;
-  color: #fff;
-  /* Никаких transition, transform, hover-эффектов */
 }
 
-.footer-block a:hover {
-  color: #FFA30B; /* только изменение цвета, без анимации */
+footer a:hover {
+  color: #FFA30B;
 }
 
-/* Мобильные устройства (до 768px): колонка, центрирование, показываем мобильную версию документов */
-@media (max-width: 768px) {
+/* Планшеты (768px – 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
   footer {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px;
+  }
+  footer ul {
+    padding: 1rem;
+  }
+  footer ul li:not(:first-child),
+  footer ul li:not(:first-child) a {
+    font-size: 0.85rem !important;
+  }
+}
+/* Мобильные устройства (до 767px) */
+@media (max-width: 767px) {
+  footer {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    gap: 1.5rem;
+  }
+  footer ul {
+    width: 100% !important;
+    max-width: 450px;
+    height: auto;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    text-align: center !important;
+  }
+  footer ul li:first-child {
+    text-align: center !important;
+  }
+  .footer_link1 {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
   }
-  footer > ul {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  /* Показываем блок .footer_link1 (мобильная версия документов) */
-  .footer_link1 {
-    display: block !important;
-  }
-  /* Скрываем десктопную версию */
   .footer_link2 {
     display: none !important;
-  }
-  /* Центрируем все блоки */
-  .footer_page, .footer_page2, .footer_link, .footer_link1 {
-    text-align: center !important;
-  }
-}
-/* Планшеты и десктоп — три колонки в строку */
-@media (min-width: 769px) {
-  footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ровно три колонки */
-    gap: 1.5rem;
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0;
-    text-align: left;
-  }
-  /* Убираем лишние flex-свойства, если они были */
-  footer > ul {
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-  /* Показываем десктопную версию документов, скрываем мобильную */
-  .footer_link1 {
-    display: none !important;
-  }
-  .footer_link2 {
-    display: block !important;
-  }
-  /* Выравнивание содержимого */
-  .footer_page,
-  .footer_page2,
-  .footer_link,
-  .footer_link2 {
-    text-align: left;
   }
 }
 @media (max-width: 991px) {

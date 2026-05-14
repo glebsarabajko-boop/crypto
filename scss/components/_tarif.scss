@@ -28,12 +28,14 @@
     background: $orange-light;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: column;
     min-width: 300px;
     border-radius: 30px;
     padding: 30px 0;
     text-align: center;
     color: $white;
+    gap: 25px;
 
     img {
       width: 80%;
@@ -48,7 +50,6 @@
     button {
       width: 120px;
       height: 40px;
-      margin: auto;
       border-radius: 30px;
       border: none;
       background: $orange-main;
@@ -59,6 +60,7 @@
 .button11 {
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 20px;
 
   button {
     margin-left: 3%;
