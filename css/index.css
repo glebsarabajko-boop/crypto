@@ -585,9 +585,10 @@ header .text h4 {
   }
   header .text {
     width: 100%;
-    min-height: 300px;
+    min-height: 280px;
     margin-top: 0px;
     padding-top: 10%;
+    padding-bottom: 8%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6980392157);
     position: relative;
@@ -672,6 +673,13 @@ header .text h4 {
   }
 }
 @media (max-width: 650px) {
+  .section {
+    min-height: auto;
+    padding: 40px 5%;
+  }
+  .section .statistika {
+    margin-top: 12px;
+  }
   .section h1 {
     font-size: 40px;
   }
@@ -729,13 +737,24 @@ header .text h4 {
   }
 }
 @media (max-width: 800px) {
+  .kurs {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+  .kurs_text h3 {
+    margin-bottom: 20px;
+  }
+  .kurs_text p {
+    margin-bottom: 20px;
+  }
   .kurs_text {
     width: 90%;
     text-align: center;
   }
   .kurs img {
     width: 70%;
-    min-width: 300px;
+    min-width: 0;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 521px) {
@@ -754,7 +773,7 @@ header .text h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 650px;
+  min-height: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -925,6 +944,14 @@ header .text h4 {
   }
 }
 @media (max-width: 950px) {
+  .otzif {
+    min-height: auto;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .otzif .button-worring {
+    margin: 22px auto 18px;
+  }
   .text_otzif .orzif_text_h1 {
     font-size: 30px;
   }
@@ -932,6 +959,7 @@ header .text h4 {
     border: none;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(16.5%, rgba(255, 163, 11, 0.42)), to(rgba(255, 163, 11, 0)));
     background: linear-gradient(180deg, rgba(255, 163, 11, 0.42) 16.5%, rgba(255, 163, 11, 0) 100%);
+    padding: 24px 16px;
   }
   .text_otzif .orzif_text_h1 span {
     background-color: rgba(243, 157, 18, 0);
@@ -980,7 +1008,9 @@ header .text h4 {
 }
 @media (max-width: 470px) {
   .otzif {
-    margin-top: 30px;
+    margin-top: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .text_otzif .orzif_text_h1 img {
     margin: 0px;
@@ -1056,12 +1086,17 @@ header .text h4 {
 }
 
 @media (max-width: 800px) {
+  .contact {
+    min-height: auto;
+    padding: 44px 0;
+  }
   .text_contact {
     width: 90%;
     position: relative;
     z-index: 1;
     width: 100%;
-    min-height: 500px;
+    min-height: auto;
+    padding: 36px 16px;
     background-color: rgba(243, 157, 18, 0.568627451);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1079,8 +1114,13 @@ header .text h4 {
     z-index: 0;
     width: 80%;
   }
+  .contact h3 {
+    margin-bottom: 16px;
+  }
   .contact h5 {
     font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 1240px) {

@@ -32,6 +32,7 @@ body {
 
   &_text {
     width: 60%;
+    min-width: 0;
 
     h1 {
       font-family: $font-amiko;
@@ -49,6 +50,13 @@ body {
       color: $white;
     }
 
+    &_body {
+      p {
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
+    }
+
     button {
       background: $orange-main;
       border: none;
@@ -58,6 +66,17 @@ body {
       font-size: 25px;
       font-weight: 400;
     }
+  }
+
+  &_purpose-label {
+    text-decoration: underline;
+  }
+
+  &_link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 44px;
   }
 }
 }
@@ -76,6 +95,19 @@ body {
   .card1_text {
     width: 90%;
     text-align: center;
+    margin-top: 16px;
+    box-sizing: border-box;
+
+    &_body {
+      border: 2px solid $orange-main;
+      border-radius: $radius-small;
+      padding: 20px 16px;
+      margin: 16px auto 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
   }
 }
 
@@ -135,7 +167,7 @@ body {
 @include max700 {
   .kurs_2_text {
     h1 { font-size: 25px; }
-    p { font-size: 15px; line-height: 16px; }
+    p { font-size: 18px; line-height: 24px; }
   }
 }
 
@@ -226,7 +258,7 @@ body {
 @include max700 {
   .kurs4 {
     h1 { font-size: 25px; }
-    p { font-size: 15px; }
+    p { font-size: 18px; line-height: 24px; }
     button { font-size: 15px; margin-top: 30px; }
   }
 }

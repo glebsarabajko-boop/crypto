@@ -176,9 +176,11 @@
             <img src="${image}" alt="" class="card1_img">
             <div class="card1_text">
               <h1>${title}</h1>
-              <p style="text-decoration: underline;">Цель курса:</p>
-              <p>${purpose}</p>
-              <a href="${tariffLink}" style="display: flex; justify-content: center; text-decoration: none; margin-top: 44px">
+              <div class="card1_text_body">
+                <p class="card1_purpose-label">Цель курса:</p>
+                <p>${purpose}</p>
+              </div>
+              <a href="${tariffLink}" class="card1_link">
                 <button>подробнее о курсе</button>
               </a>
             </div>

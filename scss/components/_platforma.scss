@@ -102,23 +102,31 @@
 
   .platforma_img {
     position: relative;
-    padding-left: 5%;
+    padding-left: 0;
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.52);
+    text-align: center;
 
     h1 {
-      font-size: 30px;
+      font-size: 38px;
+      line-height: 1.1;
       text-align: center;
-      margin: auto;
+      margin: 0 auto 14px;
       top: 0;
-      padding-left: 30px;
+      left: 0;
+      padding-left: 0;
+      scale: 1;
     }
 
     p {
-      font-size: 12px;
+      font-size: 22px;
       top: 0;
-      padding-left: 30px;
+      left: 0;
+      text-align: center;
+      margin: 0 auto;
+      padding-left: 0;
+      scale: 1;
     }
 
     img {
@@ -158,7 +166,8 @@
 
     h3 {
       font-size: 24px;
-      color: black;
+      color: $orange-main;
+      font-weight: 600;
     }
   }
 
@@ -170,16 +179,27 @@
   .platforma_img {
     width: 90%;
     text-align: center;
+    padding-left: 0;
 
     h1 {
-      font-size: 30px;
+      font-size: 40px;
+      line-height: 1.1;
       top: 0;
+      left: 0;
+      text-align: center;
+      margin: 0 auto 14px;
+      padding-left: 0;
+      scale: 1;
     }
 
     p {
+      font-size: 23px;
       top: 0;
+      left: 0;
       text-align: center;
-      padding-left: 40px;
+      margin: 0 auto;
+      padding-left: 0;
+      scale: 1;
     }
   }
 }
@@ -258,10 +278,18 @@
 
 @include max743 {
   .platforma_img {
-    padding-left: 45px;
+    padding-left: 0;
+    text-align: center;
 
     h1 {
-      font-size: 26px;
+      font-size: 37px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 21px;
+      text-align: center;
     }
   }
 }
@@ -269,11 +297,11 @@
 @include max617 {
   .platforma_img {
     h1 {
-      font-size: 23px;
+      font-size: 35px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 20px;
     }
   }
 }
@@ -281,11 +309,11 @@
 @include max539 {
   .platforma_img {
     h1 {
-      font-size: 20px;
+      font-size: 33px;
     }
 
     p {
-      font-size: 12px;
+      font-size: 19px;
     }
   }
 }
@@ -293,11 +321,11 @@
 @include max475 {
   .platforma_img {
     h1 {
-      font-size: 17px;
+      font-size: 31px;
     }
 
     p {
-      font-size: 10px;
+      font-size: 18px;
     }
 
     img {
@@ -310,11 +338,11 @@
 @include max404 {
   .platforma_img {
     h1 {
-      font-size: 14px;
+      font-size: 29px;
     }
 
     p {
-      font-size: 10px;
+      font-size: 17px;
     }
 
     img {
@@ -468,12 +496,41 @@
     @include flex-center;
   }
 
+  .abuwim_text,
   .ikkinchi_pech {
     width: 90%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .ikkinchi_pech {
     background: linear-gradient(180deg, rgba($orange-main, 0.39) 0%, rgba($orange-main, 0) 100%);
     border-radius: 60px;
     margin-top: 40px;
     padding: 5%;
+  }
+
+  .yozuvlar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    .abuwim_kichkina {
+      margin: 0 auto 16px;
+    }
+
+    p {
+      width: 100% !important;
+      max-width: 100%;
+      text-align: center;
+      line-height: 1.45;
+      padding: 0 4px;
+    }
   }
 
   .pejlar {
@@ -493,16 +550,19 @@
   }
 
   .abuwim_text {
-    width: 90%;
     background: rgba($orange-main, 0.19);
     box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
 @include max585 {
-  .abuwim_text {
+  .abuwim_text,
+  .ikkinchi_pech {
     width: 100%;
     max-width: 100%;
+  }
+
+  .abuwim_text {
     border-radius: 40px;
 
     h1 {
@@ -513,11 +573,26 @@
     }
   }
 
+  .ikkinchi_pech {
+    border-radius: 40px;
+  }
+
   .yozuvlar {
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    padding: 0 12px;
+
+    .abuwim_kichkina {
+      margin: 0 auto 14px;
+    }
 
     p {
+      width: 100% !important;
       font-size: 20px;
+      text-align: center;
+      line-height: 1.5;
     }
   }
 
